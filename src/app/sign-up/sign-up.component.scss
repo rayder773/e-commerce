@@ -1,4 +1,27 @@
-.signUpContainer {
+.sign-up-container {
   min-width: 300px;
-  background: red;
+  min-height: 600px;
+
+  &__mode {
+    display: flex;
+    justify-content: space-around;
+    color: black;
+
+    .active {
+      color: red;
+    }
+  }
+
+  &__form {
+    padding: 1em;
+    .form_common {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__sing-in {
+
+    }
+  }
 }
+

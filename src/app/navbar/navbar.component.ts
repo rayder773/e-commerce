@@ -10,11 +10,12 @@ import {SignUpComponent} from '../sign-up/sign-up.component';
 export class NavbarComponent {
   constructor(public dialog: MatDialog) {}
 
+  ngOnInit(): void {
+    this.openDialog();
+  }
+
   openDialog(): void {
     this.dialog.open(SignUpComponent, {
-      data: {
-        animal: 'panda'
-      },
       panelClass: 'test'
     });
   }

@@ -1,6 +1,41 @@
-<div class="signUpContainer">
-  <h1>Login</h1>
-  <button>X</button>
+<div class="sign-up-container">
+  <div class="sign-up-container__mode">
+    <button
+      (click)="isSignIn = true"
+      [class.active]="isSignIn"
+    >
+      Sign in
+    </button>
+    <button
+      (click)="isSignIn = false"
+      [class.active]="!isSignIn"
+    >
+      Sign up
+    </button>
+  </div>
+  <form
+    class="sign-up-container__form"
+    [formGroup]="signInForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div
+      *ngIf="isSignIn else signUpBlock"
+      class="sign-up-container__form__sign-in form_common"
+    >
+      <mat-form-field>
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="emailInput">
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input matInput formControlName="passwordInput">
+      </mat-form-field>
+      <button class="btn" type="submit" [disabled]="!signInForm.valid">Submit</button>
+    </div>
+    <ng-template #signUpBlock>
+      sign Up
+    </ng-template>
+  </form>
 </div>
 
 
