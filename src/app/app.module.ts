@@ -12,12 +12,19 @@ import {HttpClientModule} from '@angular/common/http';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import { CatalogPageComponent } from './pages/catalog-page/catalog-page.component';
+import { AboutPageComponent } from './pages/about-page/about-page.component';
+import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import {AppRoutingModule} from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     SignUpComponent,
     NavbarComponent,
+    CatalogPageComponent,
+    AboutPageComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
@@ -27,7 +34,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    // AppRouterModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
   ],

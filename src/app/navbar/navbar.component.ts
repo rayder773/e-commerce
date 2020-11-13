@@ -11,7 +11,7 @@ export class NavbarComponent {
   constructor(public dialog: MatDialog) {}
 
   ngOnInit(): void {
-    this.openDialog();
+    // this.openDialog();
   }
 
   openDialog(): void {

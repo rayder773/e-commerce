@@ -1,9 +1,29 @@
-<nav class="nav">
-  <ol>
-<!--    <li><a routerLink="/about">about</a></li>-->
-<!--    <li><a routerLink="/">home</a></li>-->
-    <li>
-      <button mat-raised-button (click)="openDialog()">Login</button>
-    </li>
-  </ol>
+<nav class="navbar">
+  <div class="navbar__menu">
+    <div class="navbar__menu__left">
+      <input type="text" placeholder="search" />
+    </div>
+    <div class="navbar__menu__right">
+      <ul class="navbar__menu__list">
+        <li>
+          <a routerLink="/catalog" routerLinkActive="active-route">
+            Каталог
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about" routerLinkActive="active-route">О нас</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="shopping-cart">
+    <img src="../../assets/images/shopping-cart.png" alt="shopping-cart">
+  </div>
+<!--  <ol>-->
+<!--&lt;!&ndash;    <li><a routerLink="/about">about</a></li>&ndash;&gt;-->
+<!--&lt;!&ndash;    <li><a routerLink="/">home</a></li>&ndash;&gt;-->
+<!--    <li>-->
+<!--      <button mat-raised-button (click)="openDialog()">Login</button>-->
+<!--    </li>-->
+<!--  </ol>-->
 </nav>
