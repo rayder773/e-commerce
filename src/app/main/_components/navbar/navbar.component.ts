@@ -10,8 +10,10 @@ import {SignUpComponent} from '../sign-up/sign-up.component';
 export class NavbarComponent {
   constructor(public dialog: MatDialog) {}
 
+  test = 3;
+
   ngOnInit(): void {
-    // this.openDialog();
+    this.openDialog();
   }
 
   openDialog(): void {
