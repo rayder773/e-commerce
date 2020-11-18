@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {CommonServices} from './shared/_services/common.services';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +9,10 @@ import {Component, OnInit} from '@angular/core';
 export class AppComponent  implements OnInit{
   title = 'shop';
 
-  constructor() {
+  commonService: CommonServices;
+
+  constructor(commonService: CommonServices) {
+    this.commonService = commonService;
   }
 
   ngOnInit(): void {

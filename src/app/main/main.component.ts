@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CommonServices} from '../shared/_services/common.services';
 
 @Component({
   selector: 'app-main',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  testList = [
+    {name: 'Electronic', img: ''}
+  ];
 
-  constructor() { }
+  commonService: CommonServices;
+
+  constructor(commonService: CommonServices) {
+    this.commonService = commonService;
+  }
 
   ngOnInit(): void {
   }
+
 
 }

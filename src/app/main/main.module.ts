@@ -8,6 +8,7 @@ import {NavbarComponent} from './_components/navbar/navbar.component';
 import {CatalogPageComponent} from './_pages/catalog-page/catalog-page.component';
 import {AboutPageComponent} from './_pages/about-page/about-page.component';
 import {SharedModule} from '../shared/shared.module';
+import { HomePageComponent } from './_pages/home-page/home-page.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {SharedModule} from '../shared/shared.module';
     NavbarComponent,
     CatalogPageComponent,
     AboutPageComponent,
+    HomePageComponent,
   ],
   imports: [
     CommonModule,

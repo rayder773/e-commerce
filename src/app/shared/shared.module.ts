@@ -7,10 +7,14 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.component';
-
+import {SidebarComponent} from './_components/sidebar/sidebar.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 @NgModule({
-  declarations: [PageNotFoundComponent],
+  declarations: [
+    PageNotFoundComponent,
+    SidebarComponent,
+  ],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -18,6 +22,7 @@ import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.comp
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
+    MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
   ],
@@ -29,7 +34,9 @@ import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.comp
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SidebarComponent,
+    MatSidenavModule,
   ]
 })
 export class SharedModule { }

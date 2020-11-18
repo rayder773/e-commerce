@@ -13,7 +13,7 @@ export class NavbarComponent {
   test = 3;
 
   ngOnInit(): void {
-    this.openDialog();
+    // this.openDialog();
   }
 
   openDialog(): void {

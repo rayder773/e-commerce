@@ -4,8 +4,10 @@ import {Routes, RouterModule} from '@angular/router';
 import {MainComponent} from './main.component';
 import {AboutPageComponent} from './_pages/about-page/about-page.component';
 import {CatalogPageComponent} from './_pages/catalog-page/catalog-page.component';
+import {HomePageComponent} from './_pages/home-page/home-page.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   {
     path: '',
     component: MainComponent,
@@ -18,9 +20,12 @@ const routes: Routes = [
         path: 'catalog',
         component: CatalogPageComponent
       },
+      {
+        path: '',
+        component: HomePageComponent
+      },
     ]
   },
-
 ];
 
 @NgModule({
