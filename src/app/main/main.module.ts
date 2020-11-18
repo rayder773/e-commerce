@@ -9,6 +9,14 @@ import {CatalogPageComponent} from './_pages/catalog-page/catalog-page.component
 import {AboutPageComponent} from './_pages/about-page/about-page.component';
 import {SharedModule} from '../shared/shared.module';
 import { HomePageComponent } from './_pages/home-page/home-page.component';
+import { ProductGroupComponent } from './_pages/product-group/product-group.component';
+import { ProductComponent } from './_pages/product/product.component';
+import { SliderComponent } from './_components/slider/slider.component';
+import { CartComponent } from './_components/cart/cart.component';
+import { OrderComponent } from './_pages/order/order.component';
+import { FooterComponent } from './_components/footer/footer.component';
+import { FilterComponent } from './_components/filter/filter.component';
+import { CategoriesComponent } from './_components/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +26,14 @@ import { HomePageComponent } from './_pages/home-page/home-page.component';
     CatalogPageComponent,
     AboutPageComponent,
     HomePageComponent,
+    ProductGroupComponent,
+    ProductComponent,
+    SliderComponent,
+    CartComponent,
+    OrderComponent,
+    FooterComponent,
+    FilterComponent,
+    CategoriesComponent,
   ],
   imports: [
     CommonModule,

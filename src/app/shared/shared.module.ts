@@ -9,11 +9,15 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.component';
 import {SidebarComponent} from './_components/sidebar/sidebar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import { BreadcrumbsComponent } from './_components/breadcrumbs/breadcrumbs.component';
+import { InfoPopupComponent } from './_components/info-popup/info-popup.component';
 
 @NgModule({
   declarations: [
     PageNotFoundComponent,
     SidebarComponent,
+    BreadcrumbsComponent,
+    InfoPopupComponent,
   ],
   imports: [
     CommonModule,
@@ -37,6 +41,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     PageNotFoundComponent,
     SidebarComponent,
     MatSidenavModule,
+    BreadcrumbsComponent,
   ]
 })
 export class SharedModule { }

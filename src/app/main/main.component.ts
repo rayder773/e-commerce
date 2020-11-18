@@ -11,11 +11,9 @@ export class MainComponent implements OnInit {
     {name: 'Electronic', img: ''}
   ];
 
-  commonService: CommonServices;
-
-  constructor(commonService: CommonServices) {
-    this.commonService = commonService;
-  }
+  constructor(
+    public commonService: CommonServices
+  ) {}
 
   ngOnInit(): void {
   }

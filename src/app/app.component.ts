@@ -9,11 +9,9 @@ import {CommonServices} from './shared/_services/common.services';
 export class AppComponent  implements OnInit{
   title = 'shop';
 
-  commonService: CommonServices;
-
-  constructor(commonService: CommonServices) {
-    this.commonService = commonService;
-  }
+  constructor(
+    public commonService: CommonServices
+  ) {}
 
   ngOnInit(): void {
     // this.http.get('http://swapi.dev/api/planets/1/')
