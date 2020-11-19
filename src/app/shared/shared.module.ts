@@ -11,6 +11,9 @@ import {SidebarComponent} from './_components/sidebar/sidebar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { BreadcrumbsComponent } from './_components/breadcrumbs/breadcrumbs.component';
 import { InfoPopupComponent } from './_components/info-popup/info-popup.component';
+import {MatTreeModule} from '@angular/material/tree';
+import { TreeNgComponent } from './_components/tree-ng/tree-ng.component';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -18,6 +21,7 @@ import { InfoPopupComponent } from './_components/info-popup/info-popup.componen
     SidebarComponent,
     BreadcrumbsComponent,
     InfoPopupComponent,
+    TreeNgComponent,
   ],
   imports: [
     CommonModule,
@@ -29,6 +33,8 @@ import { InfoPopupComponent } from './_components/info-popup/info-popup.componen
     MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
+    MatTreeModule,
+    MatIconModule,
   ],
   exports: [
     MatButtonModule,
@@ -42,6 +48,9 @@ import { InfoPopupComponent } from './_components/info-popup/info-popup.componen
     SidebarComponent,
     MatSidenavModule,
     BreadcrumbsComponent,
+    MatTreeModule,
+    TreeNgComponent,
+    MatIconModule,
   ]
 })
 export class SharedModule { }
