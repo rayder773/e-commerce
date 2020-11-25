@@ -1,0 +1,11 @@
+<section class="cart">
+  <form [formGroup]="newProductForm" (ngSubmit)="onSubmit()" class="new-product-form">
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+      <label for="description">Description</label>
+      <textarea name="description" id="description" cols="30" rows="10" formControlName="description"></textarea>
+      <button class="btn" type="submit">Submit</button>
+  </form>
+</section>

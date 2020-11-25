@@ -2,7 +2,7 @@
   <!-- This is the tree node template for leaf nodes -->
   <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
     <!-- use a disabled button to provide padding for tree leaf -->
-    <button mat-icon-button>    {{node.name}}</button>
+    <a mat-icon-button [routerLink]="node.routerLink">{{node.name}}</a>
 
   </mat-tree-node>
   <!-- This is the tree node template for expandable nodes -->

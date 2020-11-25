@@ -1,0 +1,10 @@
+<ul class="product-cart">
+  <li
+    *ngFor="let product of allProducts"
+    class="product-cart__item"
+  >
+    <img [src]="product.img" />
+    <h4>title: {{product.title}}</h4>
+    <div class="product-cart__item__description">description: {{product.description}}</div>
+  </li>
+</ul>

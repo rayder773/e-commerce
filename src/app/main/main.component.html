@@ -1,4 +1,11 @@
+<mat-drawer-container class="main" autosize hasBackdrop="true">
+
 <app-navbar></app-navbar>
 
 <button (click)="commonService.setSideNav()">Click</button>
 <footer>Footer 322</footer>
+
+<mat-drawer mode="side" [opened]="commonService.isSideNavOpened">
+  <app-sidebar></app-sidebar>
+</mat-drawer>
+</mat-drawer-container>

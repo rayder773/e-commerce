@@ -1,0 +1,17 @@
+.product-cart {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    max-width: 200px;
+    margin: 2em;
+    border: 1px solid;
+    padding: 1em;
+
+    &__description {
+      max-height: 100px;
+      overflow: hidden;
+    }
+  }
+}

@@ -14,6 +14,7 @@ import { InfoPopupComponent } from './_components/info-popup/info-popup.componen
 import {MatTreeModule} from '@angular/material/tree';
 import { TreeNgComponent } from './_components/tree-ng/tree-ng.component';
 import {MatIconModule} from '@angular/material/icon';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import {MatIconModule} from '@angular/material/icon';
     ReactiveFormsModule,
     MatTreeModule,
     MatIconModule,
+    RouterModule,
   ],
   exports: [
     MatButtonModule,

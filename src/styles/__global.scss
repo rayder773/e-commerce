@@ -1,5 +1,9 @@
 @import "_colors";
 
+body {
+  background: #f4f6f8;
+}
+
 .btn {
   background: $main;
   padding: 1em;
@@ -11,4 +15,16 @@
   &:hover {
     background: $pink_hover;
   }
+}
+
+textarea {
+  resize: none;
+  padding: 0.5em;
+}
+
+.cart {
+  background: $white;
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 1px 0px 5px 0px rgba(50, 50, 50, 0.48);
 }
