@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {HttpClientModule} from '@angular/common/http';
@@ -9,12 +9,13 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.component';
 import {SidebarComponent} from './_components/sidebar/sidebar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { BreadcrumbsComponent } from './_components/breadcrumbs/breadcrumbs.component';
-import { InfoPopupComponent } from './_components/info-popup/info-popup.component';
+import {BreadcrumbsComponent} from './_components/breadcrumbs/breadcrumbs.component';
+import {InfoPopupComponent} from './_components/info-popup/info-popup.component';
 import {MatTreeModule} from '@angular/material/tree';
-import { TreeNgComponent } from './_components/tree-ng/tree-ng.component';
+import {TreeNgComponent} from './_components/tree-ng/tree-ng.component';
 import {MatIconModule} from '@angular/material/icon';
 import {RouterModule} from '@angular/router';
+import { NzTableModule } from 'ng-zorro-antd/table';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {RouterModule} from '@angular/router';
     MatTreeModule,
     MatIconModule,
     RouterModule,
+    NzTableModule,
   ],
   exports: [
     MatButtonModule,
@@ -53,6 +55,8 @@ import {RouterModule} from '@angular/router';
     MatTreeModule,
     TreeNgComponent,
     MatIconModule,
+    NzTableModule
   ]
 })
-export class SharedModule { }
+export class SharedModule {
+}
