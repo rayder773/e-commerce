@@ -11,14 +11,20 @@
 <nz-table [nzData]="allProducts">
   <thead>
   <tr>
+    <th></th>
     <th>title</th>
-    <th>description</th>
+    <th>status</th>
+    <th>quantity</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let product of allProducts">
+    <td>
+      <img [src]="product.img" alt="" class="product-img"/>
+    </td>
     <td>{{product.title}}</td>
-    <td>{{product.description}}</td>
+    <td>{{product.status}}</td>
+    <td>{{product.quantity}}</td>
   </tr>
   </tbody>
 </nz-table>
