@@ -7,10 +7,17 @@ const testTreeData = [
       {name: 'Add new product', routerLink: 'new-product'},
       {name: 'All products', routerLink: 'all-products'},
     ]
-  }, {
+  },
+  {
     name: 'Categories',
     children: [
       {name: 'All categories', routerLink: 'categories'},
+    ]
+  },
+  {
+    name: 'Settings',
+    children: [
+      {name: 'All', routerLink: 'settings'},
     ]
   },
 ];

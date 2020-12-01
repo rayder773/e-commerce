@@ -5,6 +5,7 @@ import { AdminComponent } from './admin.component';
 import {NewProductComponent} from './_pages/new-product/new-product.component';
 import {AllProductsComponent} from './_pages/all-products/all-products.component';
 import {CategoriesComponent} from './_pages/categories/categories.component';
+import {SettingsComponent} from './_pages/settings/settings.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/admin', pathMatch: 'full' },
@@ -23,6 +24,10 @@ const routes: Routes = [
       {
         path: 'categories',
         component: CategoriesComponent
+      },
+      {
+        path: 'settings',
+        component: SettingsComponent
       },
     ]
   },
