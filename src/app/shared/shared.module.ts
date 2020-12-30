@@ -12,10 +12,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {BreadcrumbsComponent} from './_components/breadcrumbs/breadcrumbs.component';
 import {InfoPopupComponent} from './_components/info-popup/info-popup.component';
 import {MatTreeModule} from '@angular/material/tree';
-import {TreeNgComponent} from './_components/tree-ng/tree-ng.component';
 import {MatIconModule} from '@angular/material/icon';
 import {RouterModule} from '@angular/router';
 import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,6 @@ import { NzTableModule } from 'ng-zorro-antd/table';
     SidebarComponent,
     BreadcrumbsComponent,
     InfoPopupComponent,
-    TreeNgComponent,
   ],
   imports: [
     CommonModule,
@@ -39,6 +38,7 @@ import { NzTableModule } from 'ng-zorro-antd/table';
     MatIconModule,
     RouterModule,
     NzTableModule,
+    NzMenuModule,
   ],
   exports: [
     MatButtonModule,
@@ -53,9 +53,9 @@ import { NzTableModule } from 'ng-zorro-antd/table';
     MatSidenavModule,
     BreadcrumbsComponent,
     MatTreeModule,
-    TreeNgComponent,
     MatIconModule,
-    NzTableModule
+    NzTableModule,
+    NzMenuModule
   ]
 })
 export class SharedModule {

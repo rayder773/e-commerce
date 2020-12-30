@@ -1,3 +1,23 @@
 <div class="admin-sidebar">
-  <app-tree-ng [treeData]="treeData"></app-tree-ng>
+  <ul
+    nz-menu
+    nzMode="inline"
+    class="admin-sidebar__menu"
+  >
+    <li
+      *ngFor="let subMenu of treeData"
+      nz-submenu
+      [nzTitle]="subMenu.name"
+    >
+      <ul *ngIf="subMenu.children">
+        <li
+          *ngFor="let menu of subMenu.children"
+          nz-menu-item
+        >
+          <a [routerLink]="menu.routerLink">{{menu.name}}</a>
+        </li>
+      </ul>
+
+    </li>
+  </ul>
 </div>

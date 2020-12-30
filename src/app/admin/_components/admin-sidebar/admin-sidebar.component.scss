@@ -1,2 +1,8 @@
-.admin-sidebar { }
+.admin-sidebar {
+  width: 250px;
+}
+
+.admin-sidebar__menu {
+  min-height: 100vh;
+}
 
