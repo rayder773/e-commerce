@@ -16,6 +16,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {RouterModule} from '@angular/router';
 import { NzTableModule } from 'ng-zorro-antd/table';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
+import { NzModalModule } from 'ng-zorro-antd/modal';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +44,10 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     RouterModule,
     NzTableModule,
     NzMenuModule,
+    NzInputModule,
+    NzButtonModule,
+    NzUploadModule,
+    NzModalModule,
   ],
   exports: [
     MatButtonModule,
@@ -55,7 +64,11 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     MatTreeModule,
     MatIconModule,
     NzTableModule,
-    NzMenuModule
+    NzMenuModule,
+    NzInputModule,
+    NzButtonModule,
+    NzUploadModule,
+    NzModalModule,
   ]
 })
 export class SharedModule {

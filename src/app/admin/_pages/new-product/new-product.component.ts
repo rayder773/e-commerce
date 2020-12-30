@@ -19,9 +19,10 @@ export class NewProductComponent implements OnInit {
   }
 
   onSubmit(): void {
-    this.productService.addNewProduct(this.newProductForm.value)
-      .subscribe(res => {
-        console.log(res);
-      });
+    console.log('this.newProductForm', this.newProductForm);
+    // this.productService.addNewProduct(this.newProductForm.value)
+    //   .subscribe(res => {
+    //     console.log(res);
+    //   });
   }
 }

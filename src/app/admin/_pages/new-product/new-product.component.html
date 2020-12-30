@@ -1,11 +1,67 @@
-<section class="cart">
-  <form [formGroup]="newProductForm" (ngSubmit)="onSubmit()" class="new-product-form">
-      <mat-form-field>
-        <mat-label>Title</mat-label>
-        <input matInput formControlName="title">
-      </mat-form-field>
-      <label for="description">Description</label>
-      <textarea name="description" id="description" cols="30" rows="10" formControlName="description"></textarea>
-      <button class="btn" type="submit">Submit</button>
+<div class="new-product-page">
+  <form
+    [formGroup]="newProductForm"
+    (ngSubmit)="onSubmit()"
+    class="new-product-form"
+  >
+    <section class="new-product-form__left-section">
+      <section class="cart">
+        <div class="cart-section">
+          <div class="cart-item">
+            <label class="label">
+              Title
+              <input
+                nz-input
+                placeholder="Enter title"
+                formControlName="title"
+              />
+            </label>
+          </div>
+          <label class="label">
+            Description
+            <textarea
+              name="description"
+              formControlName="description"
+              nz-input
+              rows="4"
+            ></textarea>
+          </label>
+        </div>
+      </section>
+      <section class="cart new-product-form__media">
+        <div class="cart-section cart-header-with-button">
+          <h3>Media</h3>
+          <button type="button">Add media URL</button>
+        </div>
+        <nz-upload
+          nzType="drag"
+          [nzMultiple]="true"
+        >
+          <p class="ant-upload-drag-icon">
+            <i nz-icon nzType="inbox"></i>
+          </p>
+          <p class="ant-upload-text">Click or drag file to this area to upload</p>
+          <p class="ant-upload-hint">
+            Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
+          </p>
+        </nz-upload>
+      </section>
+    </section>
+    <section class="new-product-form__right-section">
+      <section class="cart">Categories</section>
+    </section>
   </form>
-</section>
+</div>
+<div class="section-footer_button">
+  <button
+    nz-button
+    nzType="primary"
+    type="submit"
+    (click)="onSubmit()"
+    [disabled]="newProductForm.pristine"
+  >
+    Save
+  </button>
+</div>
+
+

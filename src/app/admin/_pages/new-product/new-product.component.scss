@@ -1,8 +1,15 @@
 .new-product-form {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2em;
 
-  textarea {
-    margin: 1em 0;
+  &__left-section, &__right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+  }
+
+  &__media {
+    min-height: 300px;
   }
 }

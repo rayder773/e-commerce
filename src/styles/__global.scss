@@ -24,7 +24,36 @@ textarea {
 
 .cart {
   background: $white;
-  padding: 1em;
   border-radius: 8px;
   box-shadow: 1px 0px 5px 0px rgba(50, 50, 50, 0.48);
+
+  &-section {
+    padding: 1em;
+  }
+
+  &-item {
+    margin-bottom: 2em;
+  }
+
+  &-header-with-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    * {
+      margin: 0;
+    }
+  }
+
+}
+
+
+.label {
+  input, textarea {
+    margin-top: 0.5em;
+  }
+}
+
+.section-footer_button {
+  padding: 1em 0;
 }
