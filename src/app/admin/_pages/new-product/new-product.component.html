@@ -2,66 +2,93 @@
   <form
     [formGroup]="newProductForm"
     (ngSubmit)="onSubmit()"
-    class="new-product-form"
   >
-    <section class="new-product-form__left-section">
-      <section class="cart">
-        <div class="cart-section">
-          <div class="cart-item">
+    <div class="new-product-form">
+      <section class="new-product-form__left-section">
+        <section class="cart">
+          <div class="cart-section">
+            <div class="cart-item">
+              <label class="label">
+                Title
+                <input
+                  nz-input
+                  placeholder="Enter title"
+                  formControlName="title"
+                />
+              </label>
+            </div>
             <label class="label">
-              Title
-              <input
+              Description
+              <textarea
+                name="description"
+                formControlName="description"
                 nz-input
-                placeholder="Enter title"
-                formControlName="title"
-              />
+                rows="4"
+              ></textarea>
             </label>
           </div>
-          <label class="label">
-            Description
-            <textarea
-              name="description"
-              formControlName="description"
-              nz-input
-              rows="4"
-            ></textarea>
-          </label>
-        </div>
+        </section>
+        <section class="cart new-product-form__media">
+          <div class="cart-section cart-header-with-button">
+            <h3>Media</h3>
+            <button
+              type="button"
+              (click)="openAddMediaModal()"
+            >
+              Add media URL
+            </button>
+          </div>
+          <nz-upload
+            nzListType="picture-card"
+            class="new-product-form__upload"
+            [nzPreview]="handlePreview"
+          >
+            <div>
+              <div>Upload</div>
+            </div>
+          </nz-upload>
+        </section>
       </section>
-      <section class="cart new-product-form__media">
-        <div class="cart-section cart-header-with-button">
-          <h3>Media</h3>
-          <button type="button">Add media URL</button>
-        </div>
-        <nz-upload
-          nzType="drag"
-          [nzMultiple]="true"
-        >
-          <p class="ant-upload-drag-icon">
-            <i nz-icon nzType="inbox"></i>
-          </p>
-          <p class="ant-upload-text">Click or drag file to this area to upload</p>
-          <p class="ant-upload-hint">
-            Support for a single or bulk upload. Strictly prohibit from uploading company data or other band files
-          </p>
-        </nz-upload>
+      <section class="new-product-form__right-section">
+        <section class="cart">Categories</section>
       </section>
-    </section>
-    <section class="new-product-form__right-section">
-      <section class="cart">Categories</section>
-    </section>
+    </div>
+    <div class="section-footer_button">
+      <button
+        nz-button
+        nzType="primary"
+        type="submit"
+        [disabled]="newProductForm.pristine"
+      >
+        Save
+      </button>
+    </div>
   </form>
 </div>
-<div class="section-footer_button">
-  <button
-    nz-button
-    nzType="primary"
-    type="submit"
-    (click)="onSubmit()"
-    [disabled]="newProductForm.pristine"
-  >
-    Save
-  </button>
-</div>
+
+<nz-modal
+  [nzVisible]="previewVisible"
+  [nzContent]="modalContent"
+  [nzFooter]="null"
+  (nzOnCancel)="previewVisible = false"
+>
+  <ng-template #modalContent>
+    <img [src]="previewImage" [ngStyle]="{ width: '100%' }" />
+  </ng-template>
+</nz-modal>
+
+<nz-modal
+  [(nzVisible)]="addMediaLinkVisible"
+  nzTitle="Add media"
+  (nzOnCancel)="closeAddMediaModal()"
+  (nzOnOk)="closeAddMediaModal()"
+>
+  <label class="label">
+    URL
+    <input type="text" nz-input />
+  </label>
+
+</nz-modal>
+
 
 

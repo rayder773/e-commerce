@@ -1,3 +1,5 @@
+$max-section-width: 364px;
+
 .new-product-form {
   display: flex;
   flex-wrap: wrap;
@@ -7,9 +9,15 @@
     display: flex;
     flex-direction: column;
     gap: 2em;
+    width: 100%;
+    max-width: $max-section-width;
   }
 
   &__media {
     min-height: 300px;
+  }
+
+  &__upload {
+    padding: 1em;
   }
 }
