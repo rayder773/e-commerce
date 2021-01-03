@@ -2,6 +2,8 @@
 @import "styles/_global";
 @import "styles/_variables";
 @import "styles/_override_material";
+@import "styles/_animations";
+@import "styles/_theme";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

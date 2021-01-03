@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
@@ -20,7 +20,13 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import {UiStyleToggleService} from './_services/ui-style-toggle.service';
+import { StorageService } from './_services/local-storage.service';
 
+
+export function themeFactory(themeService: UiStyleToggleService) {
+  return () => themeService.setThemeOnStart();
+}
 
 @NgModule({
   declarations: [
@@ -69,7 +75,12 @@ import { NzModalModule } from 'ng-zorro-antd/modal';
     NzButtonModule,
     NzUploadModule,
     NzModalModule,
-  ]
+  ],
+  providers: [
+    UiStyleToggleService,
+    StorageService,
+    {provide: APP_INITIALIZER, useFactory: themeFactory, deps: [UiStyleToggleService], multi: true},
+  ],
 })
 export class SharedModule {
 }
