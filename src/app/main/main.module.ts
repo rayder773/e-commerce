@@ -17,6 +17,7 @@ import { OrderComponent } from './_pages/order/order.component';
 import { FooterComponent } from './_components/footer/footer.component';
 import { FilterComponent } from './_components/filter/filter.component';
 import { CategoriesComponent } from './_components/categories/categories.component';
+import { SidebarComponent } from './_components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CategoriesComponent } from './_components/categories/categories.compone
     FooterComponent,
     FilterComponent,
     CategoriesComponent,
+    SidebarComponent,
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,22 @@
+[nz-carousel-content] {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  //background: #364d79;
+  color: red;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.home-carousel {
+  max-width: 1011px;
+  max-height: 400px;
+}
+
+h3 {
+  color: #fff;
+  margin-bottom: 0;
+}

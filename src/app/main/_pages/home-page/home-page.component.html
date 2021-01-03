@@ -1,1 +1,9 @@
-<p>home-page works!</p>
+<nz-carousel
+  nzEffect="scrollx"
+  class="home-carousel"
+  nzAutoPlay="true"
+>
+  <div nz-carousel-content *ngFor="let src of images">
+    <img [src]="src" alt="">
+  </div>
+</nz-carousel>

@@ -7,7 +7,6 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.component';
-import {SidebarComponent} from './_components/sidebar/sidebar.component';
 import {BreadcrumbsComponent} from './_components/breadcrumbs/breadcrumbs.component';
 import {InfoPopupComponent} from './_components/info-popup/info-popup.component';
 import {MatTreeModule} from '@angular/material/tree';
@@ -19,6 +18,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzUploadModule } from 'ng-zorro-antd/upload';
 import { NzModalModule } from 'ng-zorro-antd/modal';
+import { NzCarouselModule } from 'ng-zorro-antd/carousel';
 import {UiStyleToggleService} from './_services/ui-style-toggle.service';
 import { StorageService } from './_services/local-storage.service';
 
@@ -30,7 +30,6 @@ export function themeFactory(themeService: UiStyleToggleService) {
 @NgModule({
   declarations: [
     PageNotFoundComponent,
-    SidebarComponent,
     BreadcrumbsComponent,
     InfoPopupComponent,
   ],
@@ -52,6 +51,7 @@ export function themeFactory(themeService: UiStyleToggleService) {
     NzButtonModule,
     NzUploadModule,
     NzModalModule,
+    NzCarouselModule,
   ],
   exports: [
     MatButtonModule,
@@ -62,7 +62,6 @@ export function themeFactory(themeService: UiStyleToggleService) {
     FormsModule,
     ReactiveFormsModule,
     PageNotFoundComponent,
-    SidebarComponent,
     BreadcrumbsComponent,
     MatTreeModule,
     MatIconModule,
@@ -72,6 +71,7 @@ export function themeFactory(themeService: UiStyleToggleService) {
     NzButtonModule,
     NzUploadModule,
     NzModalModule,
+    NzCarouselModule,
   ],
   providers: [
     UiStyleToggleService,

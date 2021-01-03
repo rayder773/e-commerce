@@ -1,8 +1,16 @@
-<app-navbar></app-navbar>
+<div class="main-layout">
+  <section class="main-layout__sidebar">
+    <app-sidebar></app-sidebar>
+  </section>
+  <section class="main-layout__main-content">
+    <app-navbar></app-navbar>
 
-<main class="main-component">
-  <router-outlet></router-outlet>
-</main>
+    <main class="main-component">
+      <router-outlet></router-outlet>
+    </main>
 
-<footer>Footer 322</footer>
+    <footer>Footer 322</footer>
+  </section>
+</div>
+
 
