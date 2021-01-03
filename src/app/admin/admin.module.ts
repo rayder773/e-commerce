@@ -9,7 +9,9 @@ import { AllProductsComponent } from './_pages/all-products/all-products.compone
 import { CategoriesComponent } from './_pages/categories/categories.component';
 import { AdminSidebarComponent } from './_components/admin-sidebar/admin-sidebar.component';
 import { SettingsComponent } from './_pages/settings/settings.component';
-
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from '../../environments/environment';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { SettingsComponent } from './_pages/settings/settings.component';
     CommonModule,
     AdminRoutingModule,
     SharedModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
   ]
 })
 export class AdminModule { }
