@@ -8,7 +8,6 @@ import {MatInputModule} from '@angular/material/input';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {PageNotFoundComponent} from './_pages/page-not-found/page-not-found.component';
 import {SidebarComponent} from './_components/sidebar/sidebar.component';
-import {MatSidenavModule} from '@angular/material/sidenav';
 import {BreadcrumbsComponent} from './_components/breadcrumbs/breadcrumbs.component';
 import {InfoPopupComponent} from './_components/info-popup/info-popup.component';
 import {MatTreeModule} from '@angular/material/tree';
@@ -42,7 +41,6 @@ export function themeFactory(themeService: UiStyleToggleService) {
     HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
     MatTreeModule,
@@ -65,7 +63,6 @@ export function themeFactory(themeService: UiStyleToggleService) {
     ReactiveFormsModule,
     PageNotFoundComponent,
     SidebarComponent,
-    MatSidenavModule,
     BreadcrumbsComponent,
     MatTreeModule,
     MatIconModule,

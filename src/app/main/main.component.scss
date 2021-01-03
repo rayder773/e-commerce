@@ -1,3 +1,7 @@
-.main {
+@import "/src/styles/_variables";
+
+.main-component {
   height: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
 }
