@@ -1,1 +1,17 @@
-<p>sidebar works!</p>
+<ul nz-menu [nzMode]="'vertical'">
+  <li
+    nz-submenu
+    *ngFor="let firstDepth of menu"
+    [nzTitle]="firstDepth.name"
+    nzIcon="setting"
+  >
+    <ul>
+      <li
+        *ngFor="let secondDepth of firstDepth.children"
+        nz-menu-item
+      >
+        <a routerLink="catalog">{{secondDepth.name}}</a>
+      </li>
+    </ul>
+  </li>
+</ul>
