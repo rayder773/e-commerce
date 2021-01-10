@@ -1,31 +1,30 @@
-<!--<div class="navbar-wrapper">-->
-  <nav class="navbar">
-    <div class="navbar__menu">
-      <div class="navbar__menu__left">
-        <input type="text" placeholder="search" />
-      </div>
-      <div class="navbar__menu__right">
-        <ul class="navbar__menu__list">
-          <li>
-            <a routerLink="/catalog" routerLinkActive="active-route">
-              Каталог
-            </a>
-          </li>
-          <li>
-            <a routerLink="/about" routerLinkActive="active-route">О нас</a>
-          </li>
-          <li>
-            <a routerLink="/admin" routerLinkActive="active-route">Admin</a>
-          </li>
-          <li>
-            <a routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">Home</a>
-          </li>
-        </ul>
-      </div>
+<nav class="navbar">
+  <div class="navbar__menu">
+    <div class="navbar__menu__left">
+      <input type="text" placeholder="search" />
     </div>
-    <div class="shopping-cart">
-      <img src="../../../../assets/images/shopping-cart.png" alt="shopping-cart">
+    <div class="navbar__menu__right">
+      <ul class="navbar__menu__list">
+        <li>
+          <a routerLink="/catalog" routerLinkActive="active-route">
+            Каталог
+          </a>
+        </li>
+        <li>
+          <a routerLink="/about" routerLinkActive="active-route">О нас</a>
+        </li>
+        <li>
+          <a routerLink="/admin" routerLinkActive="active-route">Admin</a>
+        </li>
+        <li>
+          <a routerLink="/" routerLinkActive="active-route" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        </li>
+      </ul>
     </div>
-  </nav>
-<!--</div>-->
+  </div>
+  <div class="shopping-cart">
+    <img src="../../../../assets/images/shopping-cart.png" alt="shopping-cart">
+  </div>
+</nav>
+<app-breadcrumb></app-breadcrumb>
 

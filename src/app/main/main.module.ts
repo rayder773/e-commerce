@@ -18,6 +18,7 @@ import { FooterComponent } from './_components/footer/footer.component';
 import { FilterComponent } from './_components/filter/filter.component';
 import { CategoriesComponent } from './_components/categories/categories.component';
 import { SidebarComponent } from './_components/sidebar/sidebar.component';
+import { BreadcrumbComponent } from './_components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { SidebarComponent } from './_components/sidebar/sidebar.component';
     FilterComponent,
     CategoriesComponent,
     SidebarComponent,
+    BreadcrumbComponent,
   ],
   imports: [
     CommonModule,

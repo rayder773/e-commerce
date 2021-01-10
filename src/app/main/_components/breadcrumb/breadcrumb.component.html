@@ -1,0 +1,12 @@
+<ul
+  *ngIf="path"
+  class="breadcrumb-component"
+>
+  <li
+    *ngFor="let p of path"
+    class="breadcrumb-component__item"
+  >
+    <a [routerLink]="p" routerLinkActive="active-breadcrumb" [routerLinkActiveOptions]="{exact: true}">{{p}}</a>
+    <span class="breadcrumb-component__item__separator">|</span>
+  </li>
+</ul>

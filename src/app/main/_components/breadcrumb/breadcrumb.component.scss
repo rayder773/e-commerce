@@ -1,0 +1,19 @@
+.breadcrumb-component {
+  display: flex;
+
+  &__item {
+    &:last-of-type {
+      .breadcrumb-component__item__separator {
+        display: none;
+      }
+    }
+  }
+
+  &__item__separator {
+    margin: 0 1em;
+  }
+}
+
+.active-breadcrumb {
+  color: green;
+}
