@@ -18,7 +18,8 @@ const routes: Routes = [
       },
       {
         path: 'catalog',
-        component: CatalogPageComponent
+        component: CatalogPageComponent,
+        data: { shouldBeFilter: true }
       },
       {
         path: '',
